@@ -1,12 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Blog;
 
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function blog(){
-        return view('blog',['title'=> 'Blog Kami']);
+        $blog = Blog::all();
+
+        return view('blog')
+                ->with('title', 'Blog')
+                ->with('blog', $blog);
     }
 }

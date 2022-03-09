@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\BlogDetail;
 
 class BlogDetailController extends Controller
 {
     public function blogDetail(){
-        return view('blog-detail',['title'=> 'Blog Detail']);
+        
+            $blogDetail = BlogDetail::all();
+    
+            return view('blog-detail')
+                    ->with('title', 'Blog Detail')
+                    ->with('blogDetail', $blogDetail);
         }
 }
