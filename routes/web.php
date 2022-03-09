@@ -18,7 +18,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])-> name('home');
+Route::get('/', [HomeController::class, 'home']);
 
 Route::get('/blog', [BlogController::class, 'blog'])-> name('blog');
 
