@@ -56,40 +56,66 @@
                       <h3><a href="blog-detail.html">The Mistakes I Made As a Coding Beginner</a></h3>
                     </div>
                   </div>
+              </div>
 
-                </div>
+              <div class="col-lg-5 ml-auto mt-5 pt-5 col-md-6 col-12">
+                <img src="images/newsletter.png" data-aos="fade-up" data-aos-delay="100" class="img-fluid"
+                    alt="newsletter">
+            </div>
 
-                <div class="col-lg-5 ml-auto mt-5 pt-5 col-md-6 col-12">
+            <div class="col-lg-5 mr-auto mt-5 pt-5 col-md-6 col-12 newsletter-form">
+                <h4 data-aos="fade-up" data-aos-delay="200">Email Newsletter</h4>
 
-                  <img src="images/newsletter.png" data-aos="fade-up" data-aos-delay="100" class="img-fluid" alt="newsletter">
-                </div>
+                <h2 data-aos="fade-up" data-aos-delay="300">Let’s stay up-to-date. We'll share you all good stuffs.</h2>
+                <form action="#" method="get" enctype="multipart/form-data">
+                    <div class="form-group mt-4" data-aos="fade-up" data-aos-delay="400">
+                        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Please enter your email" required>
 
-                <div class="col-lg-5 mr-auto mt-5 pt-5 col-md-6 col-12 newsletter-form">
-                  <h4 data-aos="fade-up" data-aos-delay="200">Email Newsletter</h4>
+                        <small id="emailHelp" class="form-text text-muted">We'll NOT share your email address to anyone
+                            else.</small>
 
-                  <h2 data-aos="fade-up" data-aos-delay="300">Let’s stay up-to-date. We'll share you all good stuffs.</h2>
-                  <form action="#" method="get" enctype="multipart/form-data">
-                  <div class="form-group mt-4" data-aos="fade-up" data-aos-delay="400">
-                    <input name="email" type="email" class="form-control" 
-                        id="email" aria-describedby="emailHelp" placeholder="Please enter your email" required>
+                    </div>
 
-                    <small id="emailHelp" class="form-text text-muted">We'll NOT share your email address to anyone else.</small>
+                    <div class="form-group form-check" data-aos="fade-up" data-aos-delay="500">
+                        <input name="monthly" type="checkbox" class="form-check-input" id="monthly">
 
-                  </div>
+                        <label class="form-check-label" for="monthly">Please send me a monthly newsletter.</label>
+                    </div>
 
-                  <div class="form-group form-check" data-aos="fade-up" data-aos-delay="500">
-                    <input name="monthly" type="checkbox" class="form-check-input" id="monthly">
+                    <button type="submit" data-aos="fade-up" data-aos-delay="500" class="btn w-100 mt-3">Sign
+                        up</button>
+                </form>
+            </div>
 
-                    <label class="form-check-label" for="monthly">Please send me a monthly newsletter.</label>
-                  </div>
-
-                    <button type="submit" data-aos="fade-up" data-aos-delay="500" class="btn w-100 mt-3">Sign up</button>
-                  </form>
-                </div>
-
-           </div>
-      </div>
- </section>
+        </div>
+    </div>
+    <br><br><br>
+               {{-- Tabel --}}
+               <table style="margin-left:auto;margin-right:auto" border="1" cellpadding="10">
+                <thead style="color:white" bgcolor="black">
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+              
+                <tbody>
+              
+                    @foreach ($blog as $b)
+                        <tr>
+                            <td>{{ $b->id }}</td>
+                            <td>{{ $b->title }}</td>
+                            <td>{{ $b->slug }}</td>
+                            <td>{{ $b->content }}</td>
+                        </tr>
+                    @endforeach
+              
+                </tbody>
+              </table>
+</section>
 @endsection
      
 

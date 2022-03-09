@@ -28,6 +28,36 @@
    <img src="images/blog/blog-header-image.jpg" class="img-fluid" alt="blog header">
  </div>
 
+ <br><br><br>
+
+     <!--Tabel-->
+ 
+     <table style="margin-left:auto;margin-right:auto" border="1" cellpadding="10">
+      <thead style="color:white" bgcolor="black">
+        <tr>
+        <th>Nomor</th>
+        <th>Title</th>
+        <th>Slug</th>
+        <th>Content</th>
+        </tr>
+         </thead>
+    
+         <tbody>
+    
+         @foreach ($blogDetail as $b)
+              <tr>
+              <td>{{$b->id}}</td>
+              <td>{{$b->title}}</td>
+              <td>{{$b->slug}}</td>
+              <td>{{$b->content}}</td>
+              </tr>
+    
+         @endforeach
+    
+         </tbody>
+    </table>
+
+
 
  <!-- BLOG DETAIL -->
  <section class="project-detail">

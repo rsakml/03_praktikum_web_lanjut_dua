@@ -32,6 +32,35 @@
           </div>
 </section>
 
+<br><br><br>
+
+ <!--Tabel-->
+ 
+ <table style="margin-left:auto;margin-right:auto" border="1" cellpadding="10">
+  <thead style="color:white" bgcolor="black">
+    <tr>
+    <th>Nomor</th>
+    <th>Title</th>
+    <th>Slug</th>
+    <th>Content</th>
+    </tr>
+     </thead>
+
+     <tbody>
+
+     @foreach ($home as $h)
+          <tr>
+          <td>{{$h->id}}</td>
+          <td>{{$h->title}}</td>
+          <td>{{$h->slug}}</td>
+          <td>{{$h->content}}</td>
+          </tr>
+
+     @endforeach
+
+     </tbody>
+</table>
+
 
 <!-- ABOUT -->
 <section class="about section-padding pb-0" id="about">

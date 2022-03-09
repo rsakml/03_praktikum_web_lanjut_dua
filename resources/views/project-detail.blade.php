@@ -20,6 +20,35 @@
    <img src="images/project/project-detail/interview-process.jpg" class="img-fluid" alt="interview process">
  </div>
 
+ <br><br><br>
+
+ <!--Tabel-->
+ 
+ <table style="margin-left:auto;margin-right:auto" border="1" cellpadding="10">
+  <thead style="color:white" bgcolor="black">
+    <tr>
+    <th>Nomor</th>
+    <th>Title</th>
+    <th>Slug</th>
+    <th>Content</th>
+    </tr>
+     </thead>
+
+     <tbody>
+
+     @foreach ($projectDetail as $p)
+          <tr>
+          <td>{{$p->id}}</td>
+          <td>{{$p->title}}</td>
+          <td>{{$p->slug}}</td>
+          <td>{{$p->content}}</td>
+          </tr>
+
+     @endforeach
+
+     </tbody>
+</table>
+
  <!-- PROJECT DETAIL -->
  <section class="project-detail section-padding">
       <div class="container">

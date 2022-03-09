@@ -11,7 +11,33 @@
 
                   <p>or email us at <a href="mailto:hello@company.com">hello@company.com</a></p>
                   <p>Please follow our <a rel="nofollow" href="https://templatemo.com/contact">contact page</a> to <strong>setup</strong> the contact form.</p>
-                </div>
+                
+ {{-- Tabel --}}
+ <table style="margin-left:auto;margin-right:auto" border="1" cellpadding="10">
+  <thead style="color:white" bgcolor="black">
+      <tr>
+          <th>Nomor</th>
+          <th>Nama</th>
+          <th>Email</th>
+          <th>Message</th>
+      </tr>
+  </thead>
+
+  <tbody>
+
+      @foreach ($contact as $c)
+          <tr>
+              <td>{{ $c->id }}</td>
+              <td>{{ $c->nama }}</td>
+              <td>{{ $c->email }}</td>
+              <td>{{ $c->message }}</td>
+          </tr>
+      @endforeach
+
+  </tbody>
+</table>
+
+                </div>               
 
                 <div class="col-lg-8 mx-auto col-md-10 col-12">
                 
